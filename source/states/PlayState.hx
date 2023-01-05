@@ -22,7 +22,6 @@ class PlayState extends FlxState {
 	var room:String;
 	var selectedLevel:Int;
 	var movesText:FlxText;
-	var tileSize:Int = 48;
 
 	public function new(level:Int) {
 		super();
@@ -93,8 +92,8 @@ class PlayState extends FlxState {
 
 	function placeEntities(entity:EntityData) {
 		// Normalize coordinates based on tile size.
-		var coordX = Std.int(entity.x / tileSize);
-		var coordY = Std.int(entity.y / tileSize);
+		var coordX = Std.int(entity.x / Helper.TILE_SIZE);
+		var coordY = Std.int(entity.y / Helper.TILE_SIZE);
 
 		if (entity.name == "player") {
 			player = new Player(coordX, coordY, commander);

@@ -14,10 +14,10 @@ class Player extends GameObject {
 		super(x, y);
 
 		moveable = true;
-		setSize(48, 48);
+		setSize(Helper.TILE_SIZE, Helper.TILE_SIZE);
 		commandManager = commander;
 
-		loadGraphic(AssetPaths.sokoban_tilesheet__png, true, 48, 48);
+		loadGraphic(AssetPaths.sokoban_tilesheet__png, true, Helper.TILE_SIZE, Helper.TILE_SIZE);
 		animation.add("left", [94, 95, 96, 94], 15, false);
 		animation.add("right", [91, 92, 93, 91], 15, false);
 		animation.add("up", [68, 69, 70, 68], 15, false);

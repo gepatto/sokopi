@@ -10,8 +10,6 @@ typedef Point = {
 };
 
 class GameObject extends FlxSprite {
-	static inline var SIZE:Int = 48;
-
 	public var coordX:Int;
 	public var coordY:Int;
 
@@ -26,7 +24,7 @@ class GameObject extends FlxSprite {
 	public function updatePosition(x:Int, y:Int, onUpdate:(Int, Int) -> Void) {
 		coordX = x;
 		coordY = y;
-		onUpdate(x * SIZE, y * SIZE);
+		onUpdate(x * Helper.TILE_SIZE, y * Helper.TILE_SIZE);
 	}
 
 	public function move(dir:Point):Command {

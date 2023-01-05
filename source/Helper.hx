@@ -4,6 +4,7 @@ import flixel.FlxG;
 
 class Helper {
 	public static inline var NUM_LEVELS = 8;
+	public static inline var TILE_SIZE = 48;
 
 	public static function leftPad(n:Int, char:String):String {
 		return n > 9 ? '$n' : '$char$n';
